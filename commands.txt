@@ -1,0 +1,70 @@
+//artisan comands
+php artisan make:model %table name% -mcr
+php artisan route:list
+php artisan migrate:refresh
+php artisan migrate:refresh --seed //Database Seed
+composer dump-autoload
+php artisan vendor:publish --tag=laravel-errors //Generating error pages
+
+composer require maatwebsite/excel
+php artisan make:export UsersExport --model=App\\User
+php artisan make:import UsersImport --model=App\\User
+
+php artisan make:migration create_sarine_table --create=sarine
+php artisan make:seeder UsersTableSeeder
+
+php artisan make:export UsersExport --model=User
+
+//vue commands
+npm install
+npm run watch
+
+//prod upload and deploy
+/usr/bin/composer.phar install --optimize-autoloader --no-dev
+
+npm install --only=prod
+
+///////
+$v_att_list = & func_get_args();
+$v_att_list&=func_get_args();
+sudo sed -i 's/v_att_list\ =\ \&\ /v_att_list\ \&=\ /g' /usr/share/pear7/Archive/Tar.php
+//////
+Bash issues:
+sed -i -e 's/\r$//' scriptname.sh
+
+Starting The Scheduler
+----------------------
+* * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1
+Past that line to
+-----------------
+crontab
+
+Passport keys
+---------------
+Encryption keys generated successfully.
+Personal access client created successfully.
+Client ID: 1
+Client secret: Xu8h7REJr6kR5j4K7l1x2xBqEBskHOENAmlzAD76
+Password grant client created successfully.
+Client ID: 2
+Client secret: QKuZ1DdY37CbsJD9fDUQP7vGMgIKhYzdN8svuynS
+
+need to rub after deploy to AWS
+php artisan passport:keys
+
+oaut token for user yafim:
+eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJjNDRiNTI0OTc5NDQ2NGM1NTg3ZWE2N2E1ZGMxMzNhODFkMjFhN2ZmOGI2YTBiYjRiNzI0M2Q5MDE5N2JlNTE2Yjg4N2U4ZTE5YTFiYmY1In0.eyJhdWQiOiIxIiwianRpIjoiMmM0NGI1MjQ5Nzk0NDY0YzU1ODdlYTY3YTVkYzEzM2E4MWQyMWE3ZmY4YjZhMGJiNGI3MjQzZDkwMTk3YmU1MTZiODg3ZThlMTlhMWJiZjUiLCJpYXQiOjE1NTA3NDE5MzEsIm5iZiI6MTU1MDc0MTkzMSwiZXhwIjoxNTgyMjc3OTMxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.dnEa8KpSlkvm_5h9tIUrO8HK1Up3JMpuvqy3lJTtt_y1qOderZ-1gR0US9LgQrig1QM_Sw7mkS34ojNluPIsKCMrmxwO-4lOQdVnrShjU6hbzEWm5rglPLrl9PHyly4zOQQrBQjjiFNIX5tSJ7mHcwfy2KyzZr12aJiqi7PlcwwZXdX6a-UAFElrRsGP3GdYWU3VNzdwpJytt7CUq7rui5xa6oYZ5uWfL6ighymaVnA_RQKrZzzKJ3Sr3I1RnOuv5iuprjMX9TNABOWaXUA-EGvtFGJ5tNwjJzrZSYCr1sMmEhw5ITj8x_-cbbbJzyzEfYzFpYMzpdX9ZbeWbIFl8IjYUmZkZNFVsBsu_N-Ja_ATFF-kTVAKGCbpKAAlb0q-oiWkxwCOM4SzKKNtIgdMf5ToMSGupg0mldYYOaDG14ao1WC4Absv76sEuua8Jz_zfSGMlkOMgOFWcUJqhzRLo-ygfXDv7Gzk8F30HFVEd2oOhQburjnjaOx9XmNRf4UqLQEikBtcpEL-XDNjWQH0f10UQrb08c37cBQHVE3aoY-T8TvHCaVsaghcm2UxHErG0uNnCI9W9WJofec32xeP46flOZSTFYVobgP5ZZP4ChVEKDcA5lFn-DXnOI5F5BwtlFkcFZGNh9j7JmSTTerM8rDPsOB_9rx4l3aZt_xupC0
+
+for api request
+---------------
+curl -X GET \
+http://localhost:8000/api/posts \
+-H 'Accept: application/json' \
+-H 'Content-Type: application/json' \
+-H 'Authorization: Bearer <TOKEN>'
+
+@php artisan cache:clear && @php artisan config:clear && @php artisan route:clear && @php artisan view:clear"
+
+php artisan vendor:publish --tag=passport-migrations
+
+php artisan passport:install
